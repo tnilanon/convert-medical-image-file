@@ -55,6 +55,8 @@
 
 #include "itkImage.h"
 
+//#include "itkOrientImageFilter.h"
+
 
 int main( int argc, char ** argv )
 {
@@ -170,6 +172,20 @@ int main( int argc, char ** argv )
 
   // Software Guide : BeginCodeSnippet
   writer->SetInput( reader->GetOutput() );
+    
+//    reader->Update();
+//    ImageType::Pointer t1 = reader->GetOutput();
+//    
+//    itk::OrientImageFilter< ImageType, ImageType >::Pointer orienter = itk::OrientImageFilter< ImageType, ImageType >::New();
+//    orienter->UseImageDirectionOn();
+////    orienter->SetDesiredCoordinateOrientation( itk::SpatialOrientation::ITK_COORDINATE_ORIENTATION_RAI );
+//    orienter->SetDesiredCoordinateOrientation( itk::SpatialOrientation::ITK_COORDINATE_ORIENTATION_LPI );
+//    orienter->SetInput( t1 );
+//    orienter->Update();
+//    ImageType::Pointer t2 = orienter->GetOutput();
+//    
+//    writer->SetInput( t1 );
+    
   // Software Guide : EndCodeSnippet
 
 
